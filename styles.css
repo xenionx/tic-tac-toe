@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+:root{
+    --background-color: #5eead4;
+    --main-color: #14b8a6;
+    --text-color: #f0fdfa;
+    --border-color: #0f766e;
+    --hover-color: #99f6e4;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+header{
+    width: 100%;
+    background-color: var(--main-color);
+    padding: 15px;
+    box-shadow: 0px 1.5px 1px rgba(15, 118, 110 0.8);
+}
+
+header h2{
+    font-size: 5em;
+    letter-spacing: 3px;
+    color: var(--text-color);
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+main .player-turn{
+    text-transform: uppercase;
+    font-size: 3.5em;
+    color: #0d9488;
+    font-weight: bold;
+}
+
+main .board{
+    width: 500px;
+    height: 500px;
+    border: 1px solid var(--border-color);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+}
+
+main .board > .cell {
+    font-size: 6em;
+    color: #134e4a;
+    background-color: #ccfbf1;
+    border: 2px solid var(--border-color);
+}
+
+main .board > .cell p {
+    font-size: 1.2em;
+    color: white;
+}
+
+main .restart button{
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: var(--text-color);
+    font-size: 2em;
+    border: none;
+    box-shadow: 0px 1px 3px rgba(0,0,0, 0.5);
+    padding: 20px 30px;
+    background-color: var(--main-color);
+    border-radius: 10px;
+}
+
+main .board > .cell:hover{
+    background-color: var(--hover-color);
+}
+
+main .restart button:hover{
+    background-color: var(--hover-color);
+    color: var(--main-color);
+}
